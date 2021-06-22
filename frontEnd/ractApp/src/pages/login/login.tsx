@@ -12,7 +12,7 @@ import {decrement, getMovieList, increment} from "./login.actions"
 
 
 export function Login(props: any): JSX.Element {
-  console.log("props : " ,props)
+  // console.log("props : " ,props)
   return (
     <div className="grid-container debug">
       <div className="header-container">

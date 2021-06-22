@@ -11,6 +11,7 @@ const loginDefaultState = {
 export const LoginReducer = (state = loginDefaultState, action: any) => {
     switch (action.type) {
         case 'INCREMENT':
+            // console.log(state.count)
             return { ...state, count: state.count + action.payload };
         case 'DECREMENT':
             return { ...state, count: state.count - action.payload };
