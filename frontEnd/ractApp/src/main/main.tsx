@@ -1,7 +1,7 @@
 
 import { Redirect, Route, Switch} from 'react-router-dom'
 import UserProfilePage from '../pages/account/account.page'
-import LoginPage from '../pages/login/login.page'
+import { LoginPage } from '../pages/login/login'
 
 
 export function MainPage() : JSX.Element  {

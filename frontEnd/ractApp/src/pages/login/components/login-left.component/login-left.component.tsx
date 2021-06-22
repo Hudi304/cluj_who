@@ -14,7 +14,11 @@ const loginDataInit = {
   password: ''
 };
 
-export default function LoginLeft(): JSX.Element {
+interface LoginLeftProps{
+  onInputChange :any
+}
+
+export default function LoginLeft(props : LoginLeftProps): JSX.Element {
   const [loginData, setLoginData] = useState<LoginData>(loginDataInit);
 
   const history = useHistory();
@@ -26,6 +30,7 @@ export default function LoginLeft(): JSX.Element {
 
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>, key: string): void {
     setLoginData({ ...loginData, [key]: e.target.value });
+    console.log(props.onInputChange)
     // console.log(loginData.username);
     // console.log(loginData.password);
   }

@@ -170,8 +170,7 @@ export default function AccountBody(): JSX.Element {
         <div className="profile-form-item change-password-title">
           <label className="change-password-label debug-profile">
             <b>Change Password</b>
-          </label>
-          <br />
+          </label><br />
         </div>
 
         {/* ---------------------------------------------------------- */}
