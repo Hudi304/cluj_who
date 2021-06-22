@@ -1,0 +1,28 @@
+.menu-container {
+  display: grid;
+  grid-area: 2 / 1 / span 1 / span 1;
+  padding-right: 0px;
+  background-color: #f2f4f6;
+  display: grid;
+  overflow: hidden;
+  min-width: 250px;
+}
+
+.side-bar-grid {
+  display: grid;
+  // grid-template-rows: 50px 10vh 10vh 10vh 10vh 10vh 40vh ;
+  grid-template-rows: 100px 50px 50px 50px 50px 50px;
+  //? ar trebui sa depinda de viewPort Height sau e mai bine ca le-am lasat constante?
+}
+
+.log-out-button-container {
+  display: flex;
+  align-items: flex-end;
+  // padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.debugMenu {
+  // border: 1px solid rgba(0, 0, 0, 0.8);
+}
+

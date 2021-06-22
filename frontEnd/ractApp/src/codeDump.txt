@@ -1,0 +1,9 @@
+   {/* <FormItem type="text" label="First Name*" defaultText="Jennifer" />
+        <FormItem type="text" label="Middle Name" defaultText="Enter name" />
+        <FormItem type="text" label="Last Name*" defaultText="Smith" />
+
+        <FormItem type="text" label="Email*" defaultText="jennifer.s@gmail.com" />
+        <FormItem type="text" label="Phone Number*" defaultText="(091)121 5577" />
+        <FormItem type="text" label="Fax" defaultText="" />
+        
+        <FormItem type="text" label="Address*" defaultText="Main Street 15" /> */}

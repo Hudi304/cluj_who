@@ -1,0 +1,22 @@
+.common-header-left{
+    display: flex;
+    justify-content: flex-end;
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.common-header-right{
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.common-header-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+}
+
+.common-icon-container{
+    display: flex;
+    align-items: center;
+    margin-right: 400px;
+    margin-left: 50px;
+}

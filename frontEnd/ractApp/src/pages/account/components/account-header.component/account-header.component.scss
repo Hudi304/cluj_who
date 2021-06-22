@@ -1,0 +1,17 @@
+/* * grid components */
+.profile-header-container {
+    display: grid;
+    grid-area: 1 / 1 / span 1 / span 5;
+    background-color: #FFFB87;
+    padding: 15px;
+    padding-left: 20px;
+}
+
+.button-icon{
+  color: black;
+}
+
+.profile-header-icon{
+  width: auto;
+  height: 40px
+}

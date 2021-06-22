@@ -1,0 +1,23 @@
+.change-password-button-container {
+  display: flex;
+  justify-content: flex-end;
+  grid-area: 8 / 1 / span 1 / span 3;
+  /* border: 3px solid rgba(0, 0, 0, 0.8); */
+  padding-right: 13px;
+}
+
+.save-button {
+  display: inline-block;
+  background-color: #fffb87;
+  border: 0px solid #ccc;
+  border-radius: 10px;
+  width: 170px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bolder;
+  justify-self: right;
+}
+
+.save-button:hover {
+  background-color: #ddd604;
+}

@@ -1,0 +1,38 @@
+.profile-image-grid {
+  display: grid;
+  grid-template-rows: 75px 75px 75px ;
+  background-color: #ffffff;
+}
+
+.profile-background {
+  grid-area: 1 / 1 / span 3 / span 1;
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  border: 0px solid #ccc;
+  border-radius: 15px;
+}
+
+.profile-cell {
+  display: flex;
+  justify-content: center;
+  grid-area: 2 / 1 / span 4 / span 1;
+}
+
+.profile-picture {
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  top: 5%;
+}
+
+.edit-button {
+  width: 40px;
+  height: 40px;
+  margin-top: 80px;
+  margin-left: 105px;
+  border-radius: 50%;
+  border: 0px;
+  background-color: #fffb87;
+}

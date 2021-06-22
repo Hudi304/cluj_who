@@ -1,0 +1,82 @@
+.user-profile-container {
+  grid-area: 2 / 2 / span 1 / span 3;
+  padding: 25px;
+  padding-left: 50px;
+  /* background-color: gray; */
+}
+
+.edit-button:hover {
+  background-color: #fdf743;
+}
+
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 12vh 12vh 12vh 12vh 3vh 5vh 12vh 5vh; */
+  background-color: #ffffff;
+  padding: 0px;
+}
+
+.profile-form-item {
+  justify-content: center;
+  align-content: center;
+  padding: 5px;
+  padding-left: 12px;
+  padding-right: 13px;
+}
+
+.change-password-title {
+  grid-area: 6 / 1 / span 1 / span 3;
+  /* border: 3px solid rgba(0, 0, 0, 0.8); */
+}
+
+.change-password-label {
+  font-size: 20px;
+}
+
+.change-password-form {
+  grid-area: 7 / 1 / span 1 / span 3;
+  /* border: 3px solid rgba(0, 0, 0, 0.8); */
+}
+
+.change-password-button-container {
+  display: flex;
+  justify-content: flex-end;
+  grid-area: 8 / 1 / span 1 / span 3;
+  /* border: 3px solid rgba(0, 0, 0, 0.8); */
+  padding-right: 13px;
+}
+
+.line{
+  grid-area: 5 / 1 / span 1 / span 3;
+}
+
+.save-button {
+  display: inline-block;
+  background-color: #fffb87;
+  border: 0px solid #ccc;
+  border-radius: 10px;
+  width: 170px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bolder;
+  justify-self: right;
+}
+
+@media (max-width: 900px) {
+  .profile-form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    border: 1px solid rgb(0, 0, 0);
+  }
+}
+@media (max-width: 600px) {
+  .profile-form {
+    grid-template-columns: 1fr;
+    border: 1px solid rgb(0, 0, 0);
+  }
+}
+
+.debugON {
+  // border: 1px solid rgba(0, 0, 0, 0.8);
+}

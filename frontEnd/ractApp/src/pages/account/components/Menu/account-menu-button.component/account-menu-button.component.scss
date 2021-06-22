@@ -1,0 +1,38 @@
+.menu-button-container{
+  padding-left: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+//? ar trebui indentat ce e intr-un container?
+.menu-button {
+  display: flex;
+  color: #BCC1CB;
+  border: none;
+  align-content: center;
+  margin: 15px;
+  margin-top: 30px;
+  background-color: #F2F4F6;
+  font-size: 17px;
+  transition: all 0.15s;
+  height:20px;
+}
+
+.menu-button:hover {
+  color: #464537;
+  border: none; 
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, #FFFB87 50%, #FFFB87 100%);
+}
+
+.menu-button-label{
+  margin-left: 10px;
+}
+
+//? sunt tare curios daca e ok asa 
+.menu-button:hover svg g{
+  fill: #464537;
+}
+
+.debug {
+  //  border: 1px solid rgba(0, 0, 0, 0.8); 
+}
