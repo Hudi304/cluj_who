@@ -8,10 +8,10 @@ const loginDefaultState = {
     movieList: []
 };
 
-export const LoginReducer = (state = loginDefaultState, action: any) => {
+export const LoginReducer = (state = loginDefaultState, action: Actions) => {
     switch (action.type) {
         case 'INCREMENT':
-            // console.log(state.count)
+            console.log(state.count)
             return { ...state, count: state.count + action.payload };
         case 'DECREMENT':
             return { ...state, count: state.count - action.payload };
