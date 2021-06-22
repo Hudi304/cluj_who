@@ -36,7 +36,6 @@ export default function FormDropDownItem(props: DropDownFormItemProps): JSX.Elem
                     id={props.id}
                     className="drop-down-input"
                     defaultValue={inputState}
-                    value={ inputState}
                     onChange={inputOnChange}
                 />
                
@@ -50,7 +49,7 @@ export default function FormDropDownItem(props: DropDownFormItemProps): JSX.Elem
                     <nav className="scrollbar">
                         <ul className="list">
                             {props.options.map(item => (
-                                <li className="list-item">
+                                <li className="list-item" key= { item }>
                                     <button
                                         className="list-button"
                                         onClick={() => listItemOnClick(item)}>
@@ -61,6 +60,7 @@ export default function FormDropDownItem(props: DropDownFormItemProps): JSX.Elem
                         </ul>
                     </nav>
                 </div>
+                
             </div>
         </div>
       

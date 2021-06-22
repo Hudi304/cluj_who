@@ -3,7 +3,6 @@ import './login-left.component.scss';
 import { useHistory } from 'react-router';
 import axios from 'axios';
 import { useState } from 'react';
-import { Redirect } from 'react-router-dom';
 
 interface LoginData {
   username: string;
@@ -20,33 +19,28 @@ export default function LoginLeft(): JSX.Element {
 
   const history = useHistory();
 
-  const changeRoute = () => {
-    const path = `/account`;
-    history.push(path);
-  };
+  function redirectToAccount() {
+    const path = `/account`
+    history.push(path)
+  }
 
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>, key: string): void {
     setLoginData({ ...loginData, [key]: e.target.value });
-    console.log(loginData.username);
-    console.log(loginData.password);
-    }
+    // console.log(loginData.username);
+    // console.log(loginData.password);
+  }
     
 
   function handleSubmit() {
-    console.clear();
-    console.log(loginData);
-    axios
-      .post('/login', loginData)
+    axios.post('http://127.0.0.1:3030/login', loginData)
       .then(resp => {
         alert('Succes Login');
-        console.log('Succes Login');
-        console.log(resp.data);
+        sessionStorage.setItem("token", resp.data)
+        redirectToAccount()
       })
       .catch(err => {
         alert(err.response.statusText);
-        console.log(err.response.statusText);
       });
-    return <Redirect to="/userView" />;
   }
 
   return (

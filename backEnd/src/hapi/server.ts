@@ -38,8 +38,11 @@ const basicValidation = async function (request, username, password) {
 export async function init() {
 
     const server = new Hapi.Server({
-        port: 3000,
+        port: 3030,
         host: "localhost",
+        routes: {
+            cors : true,
+        }
     });
 
     await server.register({

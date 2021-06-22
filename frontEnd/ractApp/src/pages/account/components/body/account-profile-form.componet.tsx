@@ -62,7 +62,6 @@ export default function AccountBody(): JSX.Element {
 
   function handleDDChange( key: string, item : string): void {
     setFromObj({ ...fromObj, [key]: item });
-
   }
 
 
@@ -151,7 +150,7 @@ export default function AccountBody(): JSX.Element {
 
         <FormDropDownItem
           label="Country*"
-          id="stateInput"
+          id="countryInput"
           options={countries}
           defaultText="Jennifer"
           name = "country"

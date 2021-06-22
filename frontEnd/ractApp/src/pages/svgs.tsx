@@ -2,8 +2,8 @@ export function Home(): JSX.Element {
   return (
     <svg width="21px" height="17px" viewBox="0 0 21 17" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>home</title>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Profile-Page-2" transform="translate(-39.000000, -132.000000)" fill="#ACB2BF" fill-rule="nonzero">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Profile-Page-2" transform="translate(-39.000000, -132.000000)" fill="#ACB2BF" fillRule="nonzero">
           <g id="side-menu" transform="translate(-1.000000, 70.000000)">
             <g id="1" transform="translate(40.000000, 60.000000)">
               <path
@@ -22,8 +22,8 @@ export function User(): JSX.Element {
   return (
     <svg width="17px" height="19px" viewBox="0 0 17 19" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>user</title>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Profile-Page-2" transform="translate(-41.000000, -181.000000)" fill="#ACB2BF" fill-rule="nonzero">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Profile-Page-2" transform="translate(-41.000000, -181.000000)" fill="#ACB2BF" fillRule="nonzero">
           <g id="side-menu" transform="translate(-1.000000, 70.000000)">
             <g id="2" transform="translate(40.000000, 110.000000)">
               <path
@@ -42,8 +42,8 @@ export function Folder(): JSX.Element {
   return (
     <svg width="19px" height="14px" viewBox="0 0 19 14" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>folder</title>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Profile-Page-2" transform="translate(-40.000000, -233.000000)" fill="#ACB2BF" fill-rule="nonzero">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Profile-Page-2" transform="translate(-40.000000, -233.000000)" fill="#ACB2BF" fillRule="nonzero">
           <g id="side-menu" transform="translate(-1.000000, 70.000000)">
             <g id="3" transform="translate(41.500000, 160.000000)">
               <path
@@ -62,8 +62,8 @@ export function File(): JSX.Element {
   return (
     <svg width="15px" height="19px" viewBox="0 0 15 19" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>file</title>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Profile-Page-2" transform="translate(-42.000000, -281.000000)" fill="#ACB2BF" fill-rule="nonzero">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Profile-Page-2" transform="translate(-42.000000, -281.000000)" fill="#ACB2BF" fillRule="nonzero">
           <g id="side-menu" transform="translate(-1.000000, 70.000000)">
             <g id="4" transform="translate(43.500000, 210.000000)">
               <path
@@ -82,8 +82,8 @@ export function PieChart(): JSX.Element {
   return (
     <svg width="21px" height="19px" viewBox="0 0 21 19" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>chart-pie</title>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Profile-Page-2" transform="translate(-39.000000, -331.000000)" fill="#ACB2BF" fill-rule="nonzero">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Profile-Page-2" transform="translate(-39.000000, -331.000000)" fill="#ACB2BF" fillRule="nonzero">
           <g id="side-menu" transform="translate(-1.000000, 70.000000)">
             <g id="5" transform="translate(40.500000, 260.000000)">
               <path
@@ -102,8 +102,8 @@ export function Flag(): JSX.Element {
   return (
     <svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>flag</title>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Profile-Page-2" transform="translate(-40.000000, -381.000000)" fill="#ACB2BF" fill-rule="nonzero">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Profile-Page-2" transform="translate(-40.000000, -381.000000)" fill="#ACB2BF" fillRule="nonzero">
           <g id="side-menu" transform="translate(-1.000000, 70.000000)">
             <g id="6" transform="translate(41.500000, 310.000000)">
               <path
@@ -122,8 +122,8 @@ export function PowerOff(): JSX.Element {
   return (
     <svg width="19px" height="18px" viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>power-off</title>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Profile-Page" transform="translate(-40.000000, -945.000000)" fill="#ACB2BF" fill-rule="nonzero">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Profile-Page" transform="translate(-40.000000, -945.000000)" fill="#ACB2BF" fillRule="nonzero">
           <g id="side-menu" transform="translate(-1.000000, 70.000000)">
             <g id="7" transform="translate(41.500000, 874.000000)">
               <path
@@ -143,8 +143,8 @@ export function Pen(): JSX.Element {
     <svg width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>pen</title>
 
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Profile-Page-2" transform="translate(-902.000000, -292.000000)" fill="#2C2C2C" fill-rule="nonzero">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Profile-Page-2" transform="translate(-902.000000, -292.000000)" fill="#2C2C2C" fillRule="nonzero">
           <g id="edit-btn" transform="translate(889.000000, 280.000000)">
             <path
               d="M13.6548866,26.7499958 C13.6792129,26.7499958 13.7038329,26.748634 13.7284262,26.7458836 L16.8494514,26.4010968 L26.4872725,16.763249 C27.1708647,16.0796569 27.1708647,14.9717036 26.4875396,14.2883785 L25.4618844,13.2627233 C25.1200883,12.9209272 24.6722019,12.7500292 24.2243156,12.7500292 C23.7764292,12.7500292 23.3285429,12.9209272 22.9870138,13.2624563 L20.9501764,15.2992938 L19.9999806,16.2494868 L13.3513557,22.8978207 L13.0041122,26.0210089 C12.9603463,26.4142079 13.2701524,26.7499958 13.6548866,26.7499958 Z M24.348457,17.0457114 L22.7042844,15.4012718 L23.9150436,14.190486 C24.0266079,14.0789216 24.1567575,14.062259 24.2243156,14.062259 C24.291847,14.062259 24.4222903,14.0789216 24.5335609,14.190486 L25.5592161,15.2161679 C25.7298471,15.3870659 25.7298471,15.6645883 25.5592161,15.8349523 L24.348457,17.0457114 Z M14.3991742,25.3513557 L14.6050796,23.5004766 L21.776228,16.3293282 L23.4206676,17.9737678 L22.5724793,18.8219561 L16.2470626,25.1473728 L14.3991742,25.3513557 Z"
@@ -166,8 +166,8 @@ export function Eye(props: SvgProps): JSX.Element {
     <div className={props.className}>
       <svg width="17px" height="12px" viewBox="0 0 17 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <title>eye</title>
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="Profile-Page" transform="translate(-672.000000, -858.000000)" fill="#8C93A7" fill-rule="nonzero">
+        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g id="Profile-Page" transform="translate(-672.000000, -858.000000)" fill="#8C93A7" fillRule="nonzero">
             <g id="inputs" transform="translate(434.000000, 816.000000)">
               <g id="input" transform="translate(0.000000, 28.000000)">
                 <path
@@ -187,8 +187,8 @@ export function Eye_slash(): JSX.Element {
   return (
     <svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>eye-slash</title>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Login-2" transform="translate(-468.000000, -598.000000)" fill="#8C93A7" fill-rule="nonzero">
+      <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+        <g id="Login-2" transform="translate(-468.000000, -598.000000)" fill="#8C93A7" fillRule="nonzero">
           <g id="left-column" transform="translate(135.000000, 167.000000)">
             <g id="password" transform="translate(0.000000, 387.000000)">
               <path
