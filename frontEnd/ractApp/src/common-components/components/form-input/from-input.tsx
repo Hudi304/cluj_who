@@ -11,7 +11,7 @@ export function FormItem(props: AccountProfileFormProps) : JSX.Element  {
     <div className="profile-form-item">
       <label className="form-label">{props.label}</label>
       <br />
-      <input className="input input1" type={props.type} defaultValue={props.defaultText} />
+      <input className="input" type={props.type} defaultValue={props.defaultText} />
       <br />
     </div>
   );

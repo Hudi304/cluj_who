@@ -3,11 +3,10 @@ import './login-left.component.scss';
 import { useHistory } from 'react-router';
 import axios from 'axios';
 import { useState } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'http2';
+import { LoginData } from '../../login.types';
 
-interface LoginData {
-  username: string;
-  password: string;
-}
 
 const loginDataInit = {
   username: '',
@@ -20,7 +19,6 @@ interface LoginLeftProps{
 
 export default function LoginLeft(props : LoginLeftProps): JSX.Element {
   const [loginData, setLoginData] = useState<LoginData>(loginDataInit);
-
   const history = useHistory();
 
   function redirectToAccount() {
@@ -31,8 +29,6 @@ export default function LoginLeft(props : LoginLeftProps): JSX.Element {
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>, key: string): void {
     setLoginData({ ...loginData, [key]: e.target.value });
     console.log(props.onInputChange)
-    // console.log(loginData.username);
-    // console.log(loginData.password);
   }
     
 
@@ -103,3 +99,14 @@ export default function LoginLeft(props : LoginLeftProps): JSX.Element {
     </div>
   );
 }
+
+
+// const mapStateToProps = (state:any) => ({
+//   ...state
+// })
+
+// const mapDispatchToProps = (dispatch:any) => ({
+//   ...bindActionCreators({ login }, dispatch)
+// })
+
+// export const LoginPage = connect(mapStateToProps, mapDispatchToProps)(Login);

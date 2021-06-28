@@ -1,3 +1,5 @@
+import { LoginData, ACTIONS } from "./login.types"
+
 export function decrement() {
     return {
         type: "DECREMENT",
@@ -18,3 +20,11 @@ export function getMovieList(){
         payload: 1
     }
 }
+
+export function login(loginDataArg : LoginData){
+    return {
+      type: ACTIONS.LOGIN,
+      payload:{ loginData : loginDataArg}
+    }
+}
+  

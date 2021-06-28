@@ -1,6 +1,6 @@
 
 import { Redirect, Route, Switch} from 'react-router-dom'
-import UserProfilePage from '../pages/account/account.page'
+import { UserProfilePage } from '../pages/account/account'
 import { LoginPage } from '../pages/login/login'
 
 

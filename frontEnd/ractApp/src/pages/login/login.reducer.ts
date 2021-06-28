@@ -1,6 +1,6 @@
 interface Actions {
     type: string;
-    payload: number;
+    payload: any;
 }
 
 const loginDefaultState = {
@@ -8,16 +8,18 @@ const loginDefaultState = {
     movieList: []
 };
 
-export const LoginReducer = (state = loginDefaultState, action: Actions) => {
+export function LoginReducer (state = loginDefaultState, action: Actions){
     switch (action.type) {
         case 'INCREMENT':
             console.log(state.count)
-            return { ...state, count: state.count + action.payload };
+            return { ...state, count: state.count + action.payload }
         case 'DECREMENT':
-            return { ...state, count: state.count - action.payload };
+            return { ...state, count: state.count - action.payload }
         case 'GET_MOVIE_LIST':
-            return { ...state, movieList: action.payload };
+            return { ...state, movieList: action.payload }
+        case 'LOGIN':
+            return { ...state, movieList: action.payload }
         default:
             return state;
   }
-};
+}

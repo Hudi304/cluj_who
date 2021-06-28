@@ -8,11 +8,14 @@ import LoginRight from './components/login-right/login-right.component';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import {decrement, getMovieList, increment} from "./login.actions"
-
-
+import { useEffect } from 'react';
 
 export function Login(props: any): JSX.Element {
-  // console.log("props : " ,props)
+  console.log("props : ", props)
+  useEffect(() => {
+    props.getMovieList(), console.log('1234');
+  }, []);
+
   return (
     <div className="grid-container debug">
       <div className="header-container">
@@ -21,8 +24,9 @@ export function Login(props: any): JSX.Element {
       <LoginLeft onInputChange= {props.increment}></LoginLeft>
       <LoginRight></LoginRight>
       <LoginFooter></LoginFooter>
-      <button onClick={() => console.log(props.decrement)}>-</button>
-      <button onClick={() => props.increment()}>+</button>
+      {/* <button onClick={() => console.log(props.decrement)}>-</button>
+      <button onClick={() => props.increment()}>+</button> */}
+      <button onClick={() => props.getMovieList}>-</button>
     </div>
   )
 }
@@ -30,11 +34,11 @@ export function Login(props: any): JSX.Element {
 
 const mapStateToProps = (state:any) => ({
   ...state
-});
+})
 
 const mapDispatchToProps = (dispatch:any) => ({
-  ...bindActionCreators({decrement, increment}, dispatch)
-});
+  ...bindActionCreators({decrement, increment, getMovieList}, dispatch)
+})
 
 export const LoginPage = connect(mapStateToProps, mapDispatchToProps)(Login);
 // conecteaza pagina la store, deci avem access la store
