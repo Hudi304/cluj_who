@@ -14,7 +14,7 @@ function Account(props: any): JSX.Element {
   
   useEffect(() => {
     props.getMovieListAct()
-    console.log('1234')
+    // console.log('1234')
   }, []);
 
   function handleClick() {

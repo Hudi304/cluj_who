@@ -1,4 +1,4 @@
-import { FormObj } from "../../../pages/account/components/body/account-profile-form.componet";
+import { FormObj } from "../../../pages/account/account.types";
 
 interface DeafaultButtonProps {
   text: string;

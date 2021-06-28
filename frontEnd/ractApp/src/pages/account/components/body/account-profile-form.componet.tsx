@@ -9,49 +9,8 @@ import FormDropDownItem from '../../../../common-components/components/input-dro
 import { TextBox } from '../../../../common-components/components/text-box/text-box';
 import { useState } from 'react';
 
-import { cities,states,countries } from '../../../../constants/dummyData';
-
-export interface FormObj {
-  firstName: string;
-  middleName: string;
-  lastName: string;
-
-  email: string;
-  phoneNumber: string;
-  fax: string;
-
-  address: string;
-  city: string;
-  state: string;
-
-  zipCode: string;
-  country: string;
-
-  oldPassword: string;
-  newPassword: string;
-  reNewpassword: string;
-}
-
-const fromObjInit: FormObj = {
-  firstName: '',
-  middleName: '',
-  lastName: '',
-
-  email: '',
-  phoneNumber: '',
-  fax: '',
-
-  address: '',
-  city: '',
-  state: '',
-
-  zipCode: '',
-  country: '',
-
-  oldPassword: '',
-  newPassword: '',
-  reNewpassword: ''
-};
+import { cities, states, countries } from '../../../../constants/dummyData';
+import { FormObj, fromObjInit } from '../../account.types';
 
 export default function AccountBody(): JSX.Element {
   const [fromObj, setFromObj] = useState<FormObj>(fromObjInit);
@@ -60,37 +19,27 @@ export default function AccountBody(): JSX.Element {
     setFromObj({ ...fromObj, [key]: e.target.value });
   }
 
-  function handleDDChange( key: string, item : string): void {
+  function handleDDChange(key: string, item: string): void {
     setFromObj({ ...fromObj, [key]: item });
   }
-
 
   return (
     <div className="user-profile-container debugON">
       <ProfilePic profilePicture={profilePicture} backgroudImage={backgroudImage} />
       <div className="profile-form debug">
         {/* de adaugat o valuare default care sa fie gri daca campul nu e completat */}
-        <TextBox
-          label="First Name*"
-          type="text"
-          enableHide={false}
-          defaultText="Jennifer"
-          onChange={e => handleTBChange(e, 'firstName')} />
-        
+        <TextBox label="First Name*" type="text" enableHide={false} defaultText="Jennifer" onChange={e => handleTBChange(e, 'firstName')} />
+
         <TextBox
           label="Middle Name*"
           type="text"
           enableHide={false}
           defaultText="Enter name"
-          onChange={e => handleTBChange(e, 'middleName')} />
-        
-        <TextBox
-          label="Last Name*"
-          type="text"
-          enableHide={false}
-          defaultText="Smith"
-          onChange={e => handleTBChange(e, 'lastName')} />
-        
+          onChange={e => handleTBChange(e, 'middleName')}
+        />
+
+        <TextBox label="Last Name*" type="text" enableHide={false} defaultText="Smith" onChange={e => handleTBChange(e, 'lastName')} />
+
         {/* ---------------------------------------------------------- */}
 
         <TextBox
@@ -98,22 +47,19 @@ export default function AccountBody(): JSX.Element {
           type="text"
           enableHide={false}
           defaultText="jennifer.s@gmail.com"
-          onChange={e => handleTBChange(e, 'email')} />
-        
-       <TextBox
+          onChange={e => handleTBChange(e, 'email')}
+        />
+
+        <TextBox
           label="Phone*"
           type="text"
           enableHide={false}
           defaultText="(091)121 5577"
-          onChange={e => handleTBChange(e, 'phoneNumber')} />
-        
-        <TextBox
-          label="Fax*"
-          type="text"
-          enableHide={false}
-          defaultText="Enter fax number"
-          onChange={e => handleTBChange(e, 'fax')} />
-        
+          onChange={e => handleTBChange(e, 'phoneNumber')}
+        />
+
+        <TextBox label="Fax*" type="text" enableHide={false} defaultText="Enter fax number" onChange={e => handleTBChange(e, 'fax')} />
+
         {/* ---------------------------------------------------------- */}
 
         <TextBox
@@ -121,40 +67,25 @@ export default function AccountBody(): JSX.Element {
           type="text"
           enableHide={false}
           defaultText="Main Street 15"
-          onChange={e => handleTBChange(e, 'address')} />
+          onChange={e => handleTBChange(e, 'address')}
+        />
 
-        <FormDropDownItem
-          id="cityInput"
-          options={cities}
-          label="City*"
-          defaultText="Jennifer"
-          name = "city"
-          onChange={handleDDChange}/>
-        
-        <FormDropDownItem
-          id="stateInput"
-          options={states}
-          label="State*"
-          defaultText="Jennifer"
-          name = "state"
-          onChange={handleDDChange}/>
-        
+        <FormDropDownItem id="cityInput" options={cities} label="City*" defaultText="Jennifer" name="city" onChange={handleDDChange} />
+
+        <FormDropDownItem id="stateInput" options={states} label="State*" defaultText="Jennifer" name="state" onChange={handleDDChange} />
+
         {/* ---------------------------------------------------------- */}
 
-        <TextBox
-          label="Zip Code*"
-          type="text"
-          enableHide={false}
-          defaultText="Jennifer"
-          onChange={e => handleTBChange(e, 'zipCode')} />
+        <TextBox label="Zip Code*" type="text" enableHide={false} defaultText="Jennifer" onChange={e => handleTBChange(e, 'zipCode')} />
 
         <FormDropDownItem
           label="Country*"
           id="countryInput"
           options={countries}
           defaultText="Jennifer"
-          name = "country"
-          onChange={handleDDChange}/>
+          name="country"
+          onChange={handleDDChange}
+        />
 
         <div className="profile-form-item"></div>
 
@@ -170,7 +101,8 @@ export default function AccountBody(): JSX.Element {
         <div className="profile-form-item change-password-title">
           <label className="change-password-label debug-profile">
             <b>Change Password</b>
-          </label><br />
+          </label>
+          <br />
         </div>
 
         {/* ---------------------------------------------------------- */}
@@ -180,21 +112,24 @@ export default function AccountBody(): JSX.Element {
           type="password"
           enableHide={true}
           defaultText="1234567891011"
-          onChange={e => handleTBChange(e, 'oldPassword')} />
-        
+          onChange={e => handleTBChange(e, 'oldPassword')}
+        />
+
         <TextBox
           label="New Password*"
           type="password"
           enableHide={true}
           defaultText="1234567891011"
-          onChange={e => handleTBChange(e, 'newPassword')} />
-        
+          onChange={e => handleTBChange(e, 'newPassword')}
+        />
+
         <TextBox
           label="Re-type Password*"
           type="password"
           enableHide={true}
           defaultText="1234567891011"
-          onChange={e => handleTBChange(e, 'reNewpassword')} />
+          onChange={e => handleTBChange(e, 'reNewpassword')}
+        />
 
         <DefaultButtom formObj={fromObj} text="Save Changes" />
       </div>
