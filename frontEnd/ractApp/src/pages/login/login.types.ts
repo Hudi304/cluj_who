@@ -12,3 +12,6 @@ export interface User {
   email: string;
   password: string;
 }
+
+
+export const URL = "http://127.0.0.1:3030"

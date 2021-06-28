@@ -1,5 +1,3 @@
-
-
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
 import { User } from "./login.types"
@@ -27,37 +25,3 @@ export const LoginReducer = (state = defaultState, action:Action)=>{
                 return state
         }
 }
-
-
-
-
-
-
-
-
-
-// interface Actions {
-//     type: string;
-//     payload: any;
-// }
-
-// const loginDefaultState = {
-//     count: 0,
-//     movieList: []
-// };
-
-// export function LoginReducer (state = loginDefaultState, action: Actions){
-//     switch (action.type) {
-//         case 'INCREMENT':
-//             console.log(state.count)
-//             return { ...state, count: state.count + action.payload }
-//         case 'DECREMENT':
-//             return { ...state, count: state.count - action.payload }
-//         case 'GET_MOVIE_LIST':
-//             return { ...state, movieList: action.payload }
-//         case 'LOGIN':
-//             return { ...state, movieList: action.payload }
-//         default:
-//             return state;
-//   }
-// }

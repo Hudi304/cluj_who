@@ -35,7 +35,7 @@ export default function FormDropDownItem(props: DropDownFormItemProps): JSX.Elem
                 <input
                     id={props.id}
                     className="drop-down-input"
-                    defaultValue={inputState}
+                    value={inputState}
                     onChange={inputOnChange}
                 />
                

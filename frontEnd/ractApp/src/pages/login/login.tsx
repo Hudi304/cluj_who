@@ -7,20 +7,13 @@ import LoginRight from './components/login-right/login-right.component';
 
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-// import {decrement, getMovieList, increment} from "./login.actions"
-import { useEffect } from 'react';
 import { login } from './login.actions';
 import { LoginData } from './login.types';
 import { useHistory } from 'react-router-dom';
 
 
 function Login(props: any): JSX.Element {
-  console.log("props : ", props)
   const history = useHistory();
-
-  // useEffect(() => {
-  //   props.getMovieList(), console.log('1234');
-  // }, []);
 
   const user : LoginData = {
     username: "Itachi",
@@ -32,11 +25,11 @@ function Login(props: any): JSX.Element {
       <div className="header-container">
         <Header></Header>
       </div>
+
       <LoginLeft ></LoginLeft>
       <LoginRight></LoginRight>
       <LoginFooter></LoginFooter>
-      {/* <button onClick={() => console.log(props.decrement)}>-</button>
-      <button onClick={() => props.increment()}>+</button> */}
+ 
       <button onClick={() => props.login(user,history)}>-</button>
     </div>
   )

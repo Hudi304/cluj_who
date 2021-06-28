@@ -8,43 +8,22 @@ import { LoginData } from '../../login.types';
 import { login } from '../../login.actions';
 import { connect } from "react-redux";
 
-
-
 const loginDataInit = {
   username: '',
   password: ''
 };
 
-interface LoginLeftProps{
-  onInputChange :any
-}
-
 function LoginLeftComponent(props : any): JSX.Element {
   const [loginData, setLoginData] = useState<LoginData>(loginDataInit);
   const history = useHistory();
 
-  function redirectToAccount() {
-    const path = `/account`
-    history.push(path)
-  }
-
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>, key: string): void {
     setLoginData({ ...loginData, [key]: e.target.value });
-    console.log(props.onInputChange)
+    // console.log(props.onInputChange)
   }
     
-
   function handleSubmit() {
-    // axios.post('http://127.0.0.1:3030/login', loginData)
-    //   .then(resp => {
-    //     alert('Succes Login');
-    //     sessionStorage.setItem("token", resp.data)
-    //     redirectToAccount()
-    //   })
-    //   .catch(err => {
-    //     alert(err.response.statusText);
-    //   });
-    console.log("handle submit")
+    // console.log("handle submit")
     props.login(loginData,history)
   }
 
