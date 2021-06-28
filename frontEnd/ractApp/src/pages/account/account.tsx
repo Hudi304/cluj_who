@@ -10,6 +10,29 @@ import { connect } from 'react-redux';
 import { getMovieListAct } from './account.actions';
 import { store } from '../..';
 
+const mapStateToProps = (state: any) => ({
+    ...state
+  })
+  
+  const mapDispatchToProps = (dispatch: any) => ({
+      dispatch,
+      ...bindActionCreators({ getMovieListAct },
+      dispatch) //? astea sunt ACTIONS
+  })
+  
+export const UserProfilePage = connect(mapStateToProps, mapDispatchToProps)(Account)
+
+// const handleClick = (event: any) => {
+//     try {
+//         props.login(loginaccount,history);
+        
+//       } catch (e: any) {
+//         console.log('LOGIN PROBLEM!');
+//         console.log(e.message);
+//       }
+
+// }
+
 function Account(props: any): JSX.Element {
   useEffect(() => {
     props.getMovieListAct(), console.log('1234');
@@ -32,19 +55,9 @@ function Account(props: any): JSX.Element {
       <AccountHeader></AccountHeader>
       <AccountMenu></AccountMenu>
       <AccountBody></AccountBody>
-      <button onClick={getMovieListAct}>+</button>
+      <button onClick={handleClick}>+</button>
     </div>
   );
 }
 
-const mapStateToProps = (state: any) => ({
-  ...state
-})
 
-const mapDispatchToProps = (dispatch: any) => ({
-    dispatch,
-    ...bindActionCreators({ getMovieListAct },
-    dispatch) //? astea sunt ACTIONS
-})
-
-export const UserProfilePage = connect(mapStateToProps, mapDispatchToProps)(Account)

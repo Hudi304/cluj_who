@@ -4,8 +4,10 @@ import { useHistory } from 'react-router';
 import axios from 'axios';
 import { useState } from 'react';
 import { bindActionCreators } from 'redux';
-import { connect } from 'http2';
 import { LoginData } from '../../login.types';
+import { login } from '../../login.actions';
+import { connect } from "react-redux";
+
 
 
 const loginDataInit = {
@@ -17,7 +19,7 @@ interface LoginLeftProps{
   onInputChange :any
 }
 
-export default function LoginLeft(props : LoginLeftProps): JSX.Element {
+function LoginLeftComponent(props : any): JSX.Element {
   const [loginData, setLoginData] = useState<LoginData>(loginDataInit);
   const history = useHistory();
 
@@ -33,15 +35,17 @@ export default function LoginLeft(props : LoginLeftProps): JSX.Element {
     
 
   function handleSubmit() {
-    axios.post('http://127.0.0.1:3030/login', loginData)
-      .then(resp => {
-        alert('Succes Login');
-        sessionStorage.setItem("token", resp.data)
-        redirectToAccount()
-      })
-      .catch(err => {
-        alert(err.response.statusText);
-      });
+    // axios.post('http://127.0.0.1:3030/login', loginData)
+    //   .then(resp => {
+    //     alert('Succes Login');
+    //     sessionStorage.setItem("token", resp.data)
+    //     redirectToAccount()
+    //   })
+    //   .catch(err => {
+    //     alert(err.response.statusText);
+    //   });
+    console.log("handle submit")
+    props.login(loginData,history)
   }
 
   return (
@@ -100,13 +104,11 @@ export default function LoginLeft(props : LoginLeftProps): JSX.Element {
   );
 }
 
+const mapStateToProps = (state:any) => ({
+  ...state
+})
 
-// const mapStateToProps = (state:any) => ({
-//   ...state
-// })
+const mapDispatchToProps = (dispatch:any) => ({dispatch, ...bindActionCreators({ login }, dispatch)
+})
 
-// const mapDispatchToProps = (dispatch:any) => ({
-//   ...bindActionCreators({ login }, dispatch)
-// })
-
-// export const LoginPage = connect(mapStateToProps, mapDispatchToProps)(Login);
+export const LoginLeft = connect(mapStateToProps, mapDispatchToProps)(LoginLeftComponent);
