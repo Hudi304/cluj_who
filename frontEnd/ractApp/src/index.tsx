@@ -11,6 +11,8 @@ import { AccountReducer } from './pages/account/account.reducer';
 import { LoginReducer } from './pages/login/login.reducer';
 import loginSaga from './pages/login/login.saga';
 
+import { rootSaga } from "./saga"
+
 const sagaMiddleware = createSagaMiddleware()
 
 const allReducers = combineReducers({
@@ -22,7 +24,7 @@ export const store = createStore(allReducers,
   applyMiddleware(sagaMiddleware)
 )
 
-sagaMiddleware.run(loginSaga)
+sagaMiddleware.run(rootSaga)
 
 ReactDOM.render(
   <React.StrictMode>

@@ -7,8 +7,7 @@ import * as action from './login.actions';
 
 export function loginFC(payload: any): void {
   const { account, history } = payload;
-  axios
-    .post('http://127.0.0.1:3030/login', account)
+  axios.post('http://127.0.0.1:3030/login', account)
     .then(res => {
       console.log('Login status:', res.statusText);
       if (res.statusText == 'Logged in') {
@@ -23,7 +22,6 @@ export function loginFC(payload: any): void {
 
 export function* sagaGenerators() {
   const { payload } = yield take(action.login);
-// const { payload } = yield takeEvery("LOGIN", action.login);
   yield call(loginFC, payload);
 }
 

@@ -7,3 +7,19 @@
         <FormItem type="text" label="Fax" defaultText="" />
         
         <FormItem type="text" label="Address*" defaultText="Main Street 15" /> */}
+
+
+//? Login left component
+  function handleSubmit() {
+    // axios.post('http://127.0.0.1:3030/login', loginData)
+    //   .then(resp => {
+    //     alert('Succes Login');
+    //     sessionStorage.setItem("token", resp.data)
+    //     redirectToAccount()
+    //   })
+    //   .catch(err => {
+    //     alert(err.response.statusText);
+    //   });
+    console.log("handle submit")
+    props.login(loginData,history)
+  }
