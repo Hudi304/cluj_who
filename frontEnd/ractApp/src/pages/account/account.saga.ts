@@ -1,48 +1,32 @@
-import { all, call, put, takeEvery,take, takeLatest } from 'redux-saga/effects';
-import { ACTIONS } from './account.types';
+import axios from 'axios'
+import {  takeEvery} from 'redux-saga/effects'
+import { URL } from '../../common-components/utils'
 
-export function fetchMovies() {
-  console.log('fetchMovies');
-  return fetch('https://ghibliapi.herokuapp.com/films')
-    .then(response => response.json())
-    .then(data => data);
+export function saveChangesFC(payload: any): void {
+    const { account, history } = payload
+    console.log("saveChangesFC", payload)
+    axios
+        .post(`${URL}/saveChanges`, payload)
+        .then(res => {
+            // console.log('Login status:', res.statusText);
+            if (res.statusText == 'Logged in') {
+                history.push('./account')
+                alert('Successful Login')
+            }
+        })
+        .catch(err => {
+            alert(err.response.statusText)
+        })
 }
 
-
-export function getMoviesFC(payload: any) : void{
-  const response = fetch('https://ghibliapi.herokuapp.com/films')
-    .then(response => {
-      console.log("response.json()",response.json())
-      return response
-    })
-    .then(data => {
-      console.log("data",data)
-      return data
-    });
-  console.log("response", response)
+function saveChanges(action: any) {
+    console.log(action.payload)
+    saveChangesFC(action.payload)
 }
 
-
-export function* sagaGenerators() {
-  const { payload } = yield take(ACTIONS.GET_MOVIE_LIST);
-  yield call(getMoviesFC, payload);
+export default function* accountSaga(): any {
+    yield takeEvery('SAVE_CHANGES', saveChanges) //? pot sa fac call-ul de cate ori vreau
+    //   yield all([sagaGenerators()]); //? pot sa fac un singur call
+    //? OK cauta ce si de ce
 }
 
-export default function* accountSaga() {
-  yield all([sagaGenerators()]);
-}
-
-// export function* getMovieList(): any {
-//   const response = yield call(fetchMovies);
-//   console.log('getMovieList response :', response);
-//   yield put({
-//     type: ACTIONS.GET_MOVIE_LIST,
-//     payload: response
-//   });
-// }
-
-
-// export function* getMoviesFC() {
-//   console.log('getMoviesFC');
-//   yield takeEvery(ACTIONS.GET_MOVIE_LIST, getMovieList);
-// }

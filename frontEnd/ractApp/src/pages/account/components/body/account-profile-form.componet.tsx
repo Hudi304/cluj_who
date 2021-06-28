@@ -1,18 +1,21 @@
 import { ProfilePic } from './account-profile-pic/account-profile-pic';
 import './account-profile-form.componet.scss';
-
 import backgroudImage from '../../../../assets/shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg';
 import profilePicture from '../../../../assets/amonfUS.png';
 import { DefaultButtom } from '../../../../common-components/components/button/button.component';
 import FormDropDownItem from '../../../../common-components/components/input-drop-down/input-drop-down';
-
 import { TextBox } from '../../../../common-components/components/text-box/text-box';
 import { useState } from 'react';
-
 import { cities, states, countries } from '../../../../constants/dummyData';
 import { FormObj, fromObjInit } from '../../account.types';
+import { bindActionCreators } from '@reduxjs/toolkit';
+import { connect } from 'react-redux'
 
-export default function AccountBody(): JSX.Element {
+import { saveChanges } from '../../account.actions';
+
+function AccountBodyComponent(props : any): JSX.Element {
+  console.log(props)
+
   const [fromObj, setFromObj] = useState<FormObj>(fromObjInit);
 
   function handleTBChange(e: React.ChangeEvent<HTMLInputElement>, key: string): void {
@@ -22,6 +25,10 @@ export default function AccountBody(): JSX.Element {
   function handleDDChange(key: string, item: string): void {
     setFromObj({ ...fromObj, [key]: item });
   }
+
+  // function handleSaveChanges(){
+  //   // props.
+  // }
 
   return (
     <div className="user-profile-container debugON">
@@ -131,8 +138,21 @@ export default function AccountBody(): JSX.Element {
           onChange={e => handleTBChange(e, 'reNewpassword')}
         />
 
-        <DefaultButtom formObj={fromObj} text="Save Changes" />
+        {/* <DefaultButtom formObj={fromObj} text="Save Changes" /> */}
+        <div className="change-password-button-container">
+          <button className="save-button" onClick={() => props.saveChanges(fromObj)}>Save Changes</button>
+        </div>
       </div>
     </div>
   );
 }
+
+const mapStateToProps = (state: any) => ({
+  ...state
+})
+
+const mapDispatchToProps = (dispatch: any) => ({  dispatch,  ...bindActionCreators({ saveChanges }, dispatch) //? astea sunt ACTIONS
+})
+
+export const AccountBody = connect(mapStateToProps, mapDispatchToProps)(AccountBodyComponent)
+

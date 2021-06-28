@@ -1,1 +1,2 @@
-import React from 'react';
+
+export const URL = "http://127.0.0.1:3030"
