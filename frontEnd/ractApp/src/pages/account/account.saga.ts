@@ -4,7 +4,7 @@ import { URL } from '../../common-components/utils'
 
 export function saveChangesFC(payload: any): void {
     const { account, history } = payload
-    console.log("saveChangesFC", payload)
+    console.log("saveChangesFC : payload = ", payload)
     axios
         .post(`${URL}/saveChanges`, payload)
         .then(res => {
@@ -15,12 +15,12 @@ export function saveChangesFC(payload: any): void {
             }
         })
         .catch(err => {
-            alert(err.response.statusText)
+            alert(err.response)
         })
 }
 
 function saveChanges(action: any) {
-    console.log(action.payload)
+    // console.log(action.payload)
     saveChangesFC(action.payload)
 }
 

@@ -2,7 +2,6 @@ import { ProfilePic } from './account-profile-pic/account-profile-pic';
 import './account-profile-form.componet.scss';
 import backgroudImage from '../../../../assets/shifaaz-shamoon-okVXy9tG3KY-unsplash.jpg';
 import profilePicture from '../../../../assets/amonfUS.png';
-import { DefaultButtom } from '../../../../common-components/components/button/button.component';
 import FormDropDownItem from '../../../../common-components/components/input-drop-down/input-drop-down';
 import { TextBox } from '../../../../common-components/components/text-box/text-box';
 import { useState } from 'react';
@@ -13,8 +12,11 @@ import { connect } from 'react-redux'
 
 import { saveChanges } from '../../account.actions';
 
+
+//! Nu mai folosidefault export 
+
 function AccountBodyComponent(props : any): JSX.Element {
-  console.log(props)
+  // console.log(props)
 
   const [fromObj, setFromObj] = useState<FormObj>(fromObjInit);
 
