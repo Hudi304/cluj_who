@@ -30,7 +30,7 @@ function Login(props: any): JSX.Element {
       <LoginRight></LoginRight>
       <LoginFooter></LoginFooter>
  
-      <button onClick={() => props.login(user,history)}>-</button>
+      {/* <button onClick={() => props.login(user,history)}>-</button> */}
     </div>
   )
 }

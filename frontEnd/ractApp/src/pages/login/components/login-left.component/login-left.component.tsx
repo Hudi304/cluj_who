@@ -24,7 +24,8 @@ function LoginLeftComponent(props : any): JSX.Element {
     
   function handleSubmit() {
     // console.log("handle submit")
-    props.login(loginData,history)
+    // props.login(loginData,history)
+    history.push("/account")
   }
 
   return (
