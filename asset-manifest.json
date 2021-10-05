@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.bf3a895d.chunk.css",
-    "main.js": "/static/js/main.859d254e.chunk.js",
-    "main.js.map": "/static/js/main.859d254e.chunk.js.map",
+    "main.js": "/static/js/main.6b0693f7.chunk.js",
+    "main.js.map": "/static/js/main.6b0693f7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.127adfd4.js",
     "runtime-main.js.map": "/static/js/runtime-main.127adfd4.js.map",
     "static/js/2.dd8307c9.chunk.js": "/static/js/2.dd8307c9.chunk.js",
@@ -12,7 +12,7 @@
     "index.html": "/index.html",
     "static/css/main.bf3a895d.chunk.css.map": "/static/css/main.bf3a895d.chunk.css.map",
     "static/js/2.dd8307c9.chunk.js.LICENSE.txt": "/static/js/2.dd8307c9.chunk.js.LICENSE.txt",
-    "static/js/main.859d254e.chunk.js.LICENSE.txt": "/static/js/main.859d254e.chunk.js.LICENSE.txt",
+    "static/js/main.6b0693f7.chunk.js.LICENSE.txt": "/static/js/main.6b0693f7.chunk.js.LICENSE.txt",
     "static/media/LEGO_logo.svg.b5b8d714.png": "/static/media/LEGO_logo.svg.b5b8d714.png",
     "static/media/amonfUS.7c0a94e8.png": "/static/media/amonfUS.7c0a94e8.png",
     "static/media/shifaaz-shamoon-okVXy9tG3KY-unsplash.f9d2c613.jpg": "/static/media/shifaaz-shamoon-okVXy9tG3KY-unsplash.f9d2c613.jpg"
@@ -21,6 +21,6 @@
     "static/js/runtime-main.127adfd4.js",
     "static/js/2.dd8307c9.chunk.js",
     "static/css/main.bf3a895d.chunk.css",
-    "static/js/main.859d254e.chunk.js"
+    "static/js/main.6b0693f7.chunk.js"
   ]
 }
