@@ -4,7 +4,6 @@ import '../../common-components/common.scss'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { login } from './login.actions'
-import { LoginData } from './login.types'
 import { useHistory } from 'react-router-dom'
 
 import { NavBarComponent } from './components/navbar/navbar-component'
@@ -38,9 +37,6 @@ function Login(props: any): JSX.Element {
             <div className="page-grid-container debug">
                 <div ref={ref}>
                     <div className="page-grid-item debug">
-                        {/* <h2>Plain children are always rendered. Use onChange to monitor state.</h2>
-
-                        <h2>Element is inside the viewport: {inView.toString()}</h2> */}
                     </div>
                 </div>
 
