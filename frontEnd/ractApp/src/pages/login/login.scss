@@ -1,16 +1,43 @@
-.header-container{
-  grid-area: 1 / 1 / span 1 / span 2;
+.header-container {
+    grid-area: 1 / 1 / span 1 / span 2;
 }
 
 body {
     font-family: Arial, sans-serif;
     padding: 0px;
     margin: 0px;
-  }
+}
 
-.grid-container {
-  justify-self: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 10vh auto auto auto;
+.page-grid-container {
+    display: grid;
+    grid-template-rows: 100vh 100vh 100vh;
+}
+
+.page-grid-item {
+    //   background-color: aqua;
+}
+
+.nav-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+}
+
+.nav-bar-active {
+    animation-name: slide-down;
+    animation-duration: 4s;
+}
+
+@keyframes slide-down {
+    0% {
+        top: -10;
+    }
+    100% {
+        top: 100;
+    }
+}
+
+.debug {
+    border: 1px solid black;
 }

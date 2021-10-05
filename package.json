@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-intersection-observer": "^8.32.1",
     "redux-devtools-extension": "^2.13.9"
   }
 }
