@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ClujWho/static/css/main.280a7a32.chunk.css",
+    "main.js": "/ClujWho/static/js/main.9988def3.chunk.js",
+    "main.js.map": "/ClujWho/static/js/main.9988def3.chunk.js.map",
+    "runtime-main.js": "/ClujWho/static/js/runtime-main.62daba57.js",
+    "runtime-main.js.map": "/ClujWho/static/js/runtime-main.62daba57.js.map",
+    "static/js/2.bdbdb65c.chunk.js": "/ClujWho/static/js/2.bdbdb65c.chunk.js",
+    "static/js/2.bdbdb65c.chunk.js.map": "/ClujWho/static/js/2.bdbdb65c.chunk.js.map",
+    "static/js/3.ddbe8241.chunk.js": "/ClujWho/static/js/3.ddbe8241.chunk.js",
+    "static/js/3.ddbe8241.chunk.js.map": "/ClujWho/static/js/3.ddbe8241.chunk.js.map",
+    "index.html": "/ClujWho/index.html",
+    "static/css/main.280a7a32.chunk.css.map": "/ClujWho/static/css/main.280a7a32.chunk.css.map",
+    "static/js/2.bdbdb65c.chunk.js.LICENSE.txt": "/ClujWho/static/js/2.bdbdb65c.chunk.js.LICENSE.txt",
+    "static/js/main.9988def3.chunk.js.LICENSE.txt": "/ClujWho/static/js/main.9988def3.chunk.js.LICENSE.txt",
+    "static/media/LEGO_logo.svg.b5b8d714.png": "/ClujWho/static/media/LEGO_logo.svg.b5b8d714.png",
+    "static/media/amonfUS.7c0a94e8.png": "/ClujWho/static/media/amonfUS.7c0a94e8.png",
+    "static/media/shifaaz-shamoon-okVXy9tG3KY-unsplash.f9d2c613.jpg": "/ClujWho/static/media/shifaaz-shamoon-okVXy9tG3KY-unsplash.f9d2c613.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62daba57.js",
+    "static/js/2.bdbdb65c.chunk.js",
+    "static/css/main.280a7a32.chunk.css",
+    "static/js/main.9988def3.chunk.js"
+  ]
+}
