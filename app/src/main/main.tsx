@@ -1,6 +1,6 @@
 import { Redirect, Route, Switch } from 'react-router-dom'
 import { UserProfilePage } from '../pages/account/account'
-import { ClujWhoHomePage } from '../pages/clujWHO/clujWHO_home'
+import { ClujWhoHomePage } from '../pages/cluj_who/clujWHO_home'
 import { LoginPage } from '../pages/login/login'
 
 export function MainPage(): JSX.Element {
